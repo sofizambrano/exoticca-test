@@ -6,7 +6,7 @@ import { useTripModalStore } from '@/stores/tripModalStore';
 import Modal from '@/app/ui/Modal/Modal';
 import Header from './Header/Header';
 import Itinerary from './Itinerary/Itinerary';
-import useTripsStore from '@/stores/tripsStore';
+import { useTripsStore } from '@/stores/tripsStore';
 
 const TripModal: React.FC = React.memo(() => {
   const { trips } = useTripsStore();

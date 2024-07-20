@@ -1,6 +1,6 @@
 import styles from './TripCard.module.css';
 import { useTripModalStore } from '@/stores/tripModalStore';
-import useTripsStore from '@/stores/tripsStore';
+import { useTripsStore } from '@/stores/tripsStore';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Trip } from '@/types/Trip';

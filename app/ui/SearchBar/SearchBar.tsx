@@ -13,11 +13,11 @@ export default function SearchBar() {
     setSearchTerm(searchQuery);
   }, [searchParams]);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSearchSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const params = new URLSearchParams(searchParams);
     if (searchTerm) {
@@ -29,11 +29,11 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearchSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <input
         type="text"
         value={searchTerm}
-        onChange={handleSearchChange}
+        onChange={handleChange}
         placeholder="Search trips"
         className={styles.input}
       />

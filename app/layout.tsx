@@ -1,7 +1,9 @@
 import '@/app/ui/global.css';
-import { font } from '@/app/ui/fonts';
+import { Hanken_Grotesk } from 'next/font/google';
 import styles from './layout.module.css';
 import HeaderBar from './ui/HeaderBar/HeaderBar';
+
+const font = Hanken_Grotesk({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,

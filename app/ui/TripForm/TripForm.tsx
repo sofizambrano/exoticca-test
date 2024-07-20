@@ -1,6 +1,6 @@
 import { Trip } from '@/types/Trip';
 import styles from './TripForm.module.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ItineraryItem } from '@/types/ItineraryItem';
 
 interface TripFormProps {
@@ -12,21 +12,14 @@ export default function TripForm({
   initialData,
   onSubmit,
 }: TripFormProps): JSX.Element {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [photoUrl, setPhotoUrl] = useState('');
-  const [itinerary, setItinerary] = useState<ItineraryItem[]>([
-    { day: 1, location: '', description: '' },
-  ]);
-
-  useEffect(() => {
-    if (initialData) {
-      setTitle(initialData.title);
-      setDescription(initialData.description);
-      setPhotoUrl(initialData.photo_url);
-      setItinerary(initialData.itinerary);
-    }
-  }, [initialData]);
+  const [title, setTitle] = useState(initialData?.title ?? '');
+  const [description, setDescription] = useState(
+    initialData?.description ?? ''
+  );
+  const [photoUrl, setPhotoUrl] = useState(initialData?.photo_url ?? '');
+  const [itinerary, setItinerary] = useState<ItineraryItem[]>(
+    initialData?.itinerary ?? [{ day: 1, location: '', description: '' }]
+  );
 
   const handleAddItineraryItem = () => {
     setItinerary((itinerary) => [

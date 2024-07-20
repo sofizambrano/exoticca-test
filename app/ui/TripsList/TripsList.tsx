@@ -3,7 +3,7 @@ import { getTrips } from '@/services/api';
 import { useEffect, useState } from 'react';
 import TripCard from './TripCard/TripCard';
 import styles from './TripsList.module.css';
-import useTripsStore from '@/stores/tripsStore';
+import { useTripsStore } from '@/stores/tripsStore';
 
 import { useSearchParams } from 'next/navigation';
 import Tabs from './Tabs/Tabs';

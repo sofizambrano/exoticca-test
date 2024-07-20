@@ -9,7 +9,7 @@ interface TripsState {
   updateTrip: (tripId: number, updatedTrip: Partial<Trip>) => void;
 }
 
-const useTripsStore = create<TripsState>((set) => ({
+export const useTripsStore = create<TripsState>((set) => ({
   trips: [],
   setTrips: (trips: Trip[]) => set({ trips }),
   addTrip: (trip: Trip) =>
@@ -27,5 +27,3 @@ const useTripsStore = create<TripsState>((set) => ({
       ),
     })),
 }));
-
-export default useTripsStore;

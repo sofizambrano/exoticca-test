@@ -28,3 +28,11 @@ pnpm dev
 ```
 
 This starts the development server on port 3000. Open [localhost:3000](http://localhost:3000) on your browser to try it out!
+
+## 🚀 Tests
+
+To run the tests:
+
+```bash
+pnpm test
+```

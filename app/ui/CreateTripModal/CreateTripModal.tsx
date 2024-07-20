@@ -3,7 +3,7 @@ import React from 'react';
 
 import styles from './CreateTripModal.module.css';
 import Modal from '@/app/ui/Modal/Modal';
-import useTripsStore from '@/stores/tripsStore';
+import { useTripsStore } from '@/stores/tripsStore';
 
 import TripForm from '../TripForm/TripForm';
 import { Trip } from '@/types/Trip';

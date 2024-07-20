@@ -1,6 +1,6 @@
 import { Trip } from '@/types/Trip';
 import styles from './Header.module.css';
-import useTripsStore from '@/stores/tripsStore';
+import { useTripsStore } from '@/stores/tripsStore';
 
 export default function Header(
   trip: Pick<Trip, 'id' | 'title' | 'status'>
