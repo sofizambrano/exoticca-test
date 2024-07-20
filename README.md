@@ -1,9 +1,3 @@
-## Next.js App Router Course - Starter
-
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
-
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
-
 # Travel Dreams
 
 This app is an MVP to bring your travel dreams to life! It corresponds to the Exoticca Frontend technical assessment completed by the applicant Sofía Zambrano.
@@ -33,4 +27,4 @@ Then, run the app locally:
 pnpm dev
 ```
 
-This starts the development server on port 3000. Open (localhost:3000)[http://localhost:3000] on your browser to try it out!
+This starts the development server on port 3000. Open [localhost:3000](http://localhost:3000) on your browser to try it out!
