@@ -1,0 +1,83 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.input {
+  padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-lg)
+    var(--spacing-xl);
+  border: 1px solid var(--gray-polar-night-light);
+
+  &:focus {
+    border-color: var(--gray-polar-night-light);
+    box-shadow: none;
+  }
+}
+
+.textarea {
+  border-radius: var(--radius-md);
+  resize: none;
+  height: 144px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itineraryInput {
+  display: flex;
+  background-color: var(--gray-polar-night-extra-light);
+  padding: var(--spacing-xl);
+  gap: var(--spacing-md);
+  border-radius: var(--radius-md);
+
+  .day {
+    max-width: 120px;
+
+    @media screen and (max-width: 630px) {
+      max-width: 60px;
+    }
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex: 1;
+  }
+
+  .remove {
+    align-self: flex-end;
+    color: var(--red-desert-medium);
+    text-decoration-color: var(--red-desert-medium);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: underline;
+  }
+}
+
+.submit {
+  color: var(--base-arctic-wind);
+  background-color: var(--base-polar-night);
+  padding: var(--spacing-md) calc(var(--spacing-md) + var(--spacing-lg));
+  border-radius: var(--radius-rounded);
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 160px;
+}

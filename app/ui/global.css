@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --base-polar-night: #121212;
+  --base-arctic-wind: #ffffff;
+  --gray-polar-night-medium: #898989;
+  --gray-polar-night-light: #b0b0b0;
+  --gray-polar-night-lighter: #d8d8d8;
+  --gray-polar-night-extra-light: #f3f3f3;
+  --red-desert-medium: #c93957;
+
+  --radius-md: 16px;
+  --radius-rounded: 100px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 6px;
+  --spacing-md: 8px;
+  --spacing-lg: 12px;
+  --spacing-xl: 16px;
+  --spacing-2xl: 20px;
+  --spacing-3xl: 24px;
+  --spacing-4xl: 32px;
+  --spacing-6xl: 48px;
+  --spacing-7xl: 64px;
+  --spacing-9xl: 96px;
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -15,4 +40,23 @@ input[type='number']::-webkit-inner-spin-button {
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-lg)
+    var(--spacing-xl);
+  color: var(--base-polar-night);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+::placeholder {
+  color: var(--gray-polar-night-medium);
+}
+
+input[type='text'] {
+  border-radius: var(--radius-rounded);
 }

@@ -1,0 +1,23 @@
+.wrapper {
+  border-radius: var(--radius-rounded);
+  border: 1px solid var(--gray-polar-night-lighter);
+  overflow: hidden;
+}
+
+.tab {
+  padding: var(--spacing-lg) var(--spacing-2xl) var(--spacing-lg)
+    var(--spacing-3xl);
+  color: var(--base-polar-night);
+  border-right: 1px;
+  border-style: solid;
+  border-color: var(--gray-polar-night-lighter);
+
+  &.active,
+  &:hover {
+    background-color: var(--gray-polar-night-extra-light);
+  }
+
+  &:last-of-type {
+    border: none;
+  }
+}

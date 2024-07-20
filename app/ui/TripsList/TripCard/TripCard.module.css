@@ -1,0 +1,83 @@
+.container {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-polar-night-lighter);
+  display: flex;
+  color: var(--base-polar-night);
+  overflow: hidden;
+  max-height: 206px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-3xl);
+  position: relative;
+  width: 100%;
+}
+
+.repeatButton {
+  position: absolute;
+  top: var(--spacing-3xl);
+  right: var(--spacing-3xl);
+}
+
+.photo {
+  object-fit: cover;
+  width: 50%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-xl);
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: underline;
+  text-align: left;
+
+  &.delete {
+    color: var(--red-desert-medium);
+    text-decoration-color: var(--red-desert-medium);
+  }
+
+  &.details {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .container {
+    flex-direction: column;
+    max-height: none;
+  }
+
+  .photo {
+    width: 100%;
+    max-height: 200px;
+  }
+}
