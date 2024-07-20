@@ -23,6 +23,7 @@ export default function Tabs({ tabs }: TabsProps) {
     } else {
       params.delete('status');
     }
+    params.delete('search');
     router.push(`?${params.toString()}`);
   };
 

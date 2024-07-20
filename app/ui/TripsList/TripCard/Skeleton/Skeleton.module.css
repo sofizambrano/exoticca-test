@@ -1,0 +1,26 @@
+.container {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-polar-night-lighter);
+  display: flex;
+  height: 206px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.photoPlaceholder {
+  max-width: 50%;
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.content {
+  gap: var(--spacing-xl);
+  padding: var(--spacing-3xl);
+}
+
+@media screen and (max-width: 630px) {
+  .container {
+    flex-direction: column;
+    max-height: none;
+  }
+}

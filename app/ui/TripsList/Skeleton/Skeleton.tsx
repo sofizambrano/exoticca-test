@@ -1,9 +1,8 @@
-import { TripCardSkeleton } from './TripCard/TripCardSkeleton';
-import styles from './TripsList.module.css';
+import TripCardSkeleton from '../TripCard/Skeleton/Skeleton';
 
 export function TripsListSkeleton() {
   return (
-    <div className={styles.container}>
+    <div className="flex flex-col items-stretch gap-6">
       <TripCardSkeleton />
       <TripCardSkeleton />
       <TripCardSkeleton />

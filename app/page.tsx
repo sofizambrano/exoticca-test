@@ -1,9 +1,7 @@
 import TripsList from '@/app/ui/TripsList/TripsList';
 import styles from './pages.module.css';
-import { Suspense } from 'react';
 import TripModal from '@/app/ui/TripModal/TripModal';
 import SearchBar from '@/app/ui/SearchBar/SearchBar';
-import { TripsListSkeleton } from '@/app/ui/TripsList/TripsListSkeleton';
 import EditTripModal from '@/app/ui/EditTripModal/EditTripModal';
 import CreateTripModal from './ui/CreateTripModal/CreateTripModal';
 
@@ -18,9 +16,7 @@ export default function Page() {
         <SearchBar />
       </div>
 
-      <Suspense fallback={<TripsListSkeleton />}>
-        <TripsList />
-      </Suspense>
+      <TripsList />
 
       <TripModal />
       <EditTripModal />

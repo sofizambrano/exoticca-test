@@ -8,6 +8,7 @@ import useTripsStore from '@/stores/tripsStore';
 import { useSearchParams } from 'next/navigation';
 import Tabs from './Tabs/Tabs';
 import { Trip } from '@/types/Trip';
+import { TripsListSkeleton } from './Skeleton/Skeleton';
 
 interface Tab {
   label: string;
@@ -22,6 +23,7 @@ const tabs: Tab[] = [
 
 export default function TripsList() {
   const { trips, setTrips } = useTripsStore();
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
   const [filteredTrips, setFilteredTrips] = useState<Trip[]>(trips);
   const searchParams = useSearchParams();
@@ -29,6 +31,7 @@ export default function TripsList() {
   useEffect(() => {
     const fetchData = async (signal: RequestInit['signal']) => {
       try {
+        setLoading(true);
         const result = await getTrips(signal);
         const tripsWithNewIds: Trip[] = [];
         // This had to be done because Mexico and South Corea had the same id: 5
@@ -41,6 +44,8 @@ export default function TripsList() {
         setTrips(tripsWithNewIds);
       } catch {
         setError(true);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -74,9 +79,14 @@ export default function TripsList() {
   return (
     <div className={styles.container}>
       <Tabs tabs={tabs} />
-      {filteredTrips.map((trip, index) => (
-        <TripCard key={`${trip.id}-${index}`} {...trip} />
-      ))}
+
+      {loading ? (
+        <TripsListSkeleton />
+      ) : filteredTrips.length >= 1 ? (
+        filteredTrips.map((trip) => <TripCard key={trip.id} {...trip} />)
+      ) : (
+        <p className={styles.description}>No trips</p>
+      )}
     </div>
   );
 }

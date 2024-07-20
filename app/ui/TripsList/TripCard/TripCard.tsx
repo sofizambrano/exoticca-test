@@ -32,6 +32,7 @@ export default function TripCard(trip: Trip): JSX.Element {
         height="20px"
         alt="repeat icon"
       />
+      Repeat
     </button>
   );
 
